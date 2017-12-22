@@ -58,3 +58,4 @@ typings/
 .env
 
 dadget-server/lib/
+/data
