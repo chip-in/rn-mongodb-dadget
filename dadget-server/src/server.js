@@ -10,11 +10,18 @@ if(!process.env.RN_NAME){
   process.exit();
 }
 
-let node = new ResourceNode(process.env.CORE_SERVER, process.env.RN_NAME);
-Dadget.registerServiceClasses(node);
-node.start().then(() => {
+let rnode = new ResourceNode(process.env.CORE_SERVER, process.env.RN_NAME);
+Dadget.registerServiceClasses(rnode);
+
+let jwtToken = process.env.ACCESS_TOKEN;
+let jwtRefreshPath = process.env.TOKEN_UPDATE_PATH;
+if (jwtToken) {
+  rnode.setJWTAuthorization(jwtToken, jwtRefreshPath);
+}
+
+rnode.start().then(() => {
   function sigHandle() {
-    node.stop().then(()=>{
+    rnode.stop().then(()=>{
       process.exit()
     })
   }
