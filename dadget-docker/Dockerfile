@@ -7,8 +7,7 @@ RUN apk --update add openssl
 RUN mkdir -p ${CI_HOME}/ \
   && cd ${CI_HOME} \
   && wget -qO - https://github.com/chip-in/rn-mongodb-dadget/archive/v${DADGET_VERSION}.tar.gz | tar zxf - \
-  && mv rn-mongodb-dadget-${DADGET_VERSION}/dadget-server . \
-  && rmdir rn-mongodb-dadget-${DADGET_VERSION} \
+  && ln -s rn-mongodb-dadget-${DADGET_VERSION}/dadget-server dadget-server \
   && cd dadget-server \
   && npm install \
   && npm run build
