@@ -3,7 +3,10 @@ FROM node:8-alpine
 ENV CI_HOME=/usr/local/chip-in
 ENV DADGET_VERSION=0.0.21-d5
 
-RUN apk --update add openssl
+RUN apk update \
+  && apk --update add openssl \
+  && apk add ca-certificates wget \
+  && update-ca-certificates
 RUN mkdir -p ${CI_HOME}/ \
   && cd ${CI_HOME} \
   && wget -qO - https://github.com/chip-in/rn-mongodb-dadget/archive/v${DADGET_VERSION}.tar.gz | tar zxf - \
