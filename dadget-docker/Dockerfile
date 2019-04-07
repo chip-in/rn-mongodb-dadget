@@ -1,7 +1,7 @@
 FROM node:8-alpine
 
 ENV CI_HOME=/usr/local/chip-in
-ENV DADGET_VERSION=0.1.2-d9
+ENV DADGET_VERSION=0.1.2-d10
 
 RUN apk update \
   && apk --update add openssl \
