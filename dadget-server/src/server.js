@@ -11,6 +11,7 @@ if(!process.env.RN_NAME){
 }
 
 let rnode = new ResourceNode(process.env.CORE_SERVER, process.env.RN_NAME);
+Dadget.getLogger().setLogLevel('info');
 Dadget.registerServiceClasses(rnode);
 
 let jwtToken = process.env.ACCESS_TOKEN;
