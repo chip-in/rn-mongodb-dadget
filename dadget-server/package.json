@@ -5,7 +5,8 @@
   "main": "lib/server.js",
   "dependencies": {
     "@chip-in/dadget": "0.1.6-d1",
-    "@chip-in/resource-node": "*"
+    "@chip-in/resource-node": "*",
+    "@chip-in/logger": "*"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

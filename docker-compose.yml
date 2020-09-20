@@ -10,6 +10,9 @@ services:
       - RN_NAME=db-server
       - MONGODB_URL=mongodb://mongodb:27017/
 #      - ACCESS_CONTROL_ALLOW_ORIGIN=http://localhost:3000,http://localhost
+#      - LOG_LEVEL=info
+#      - LOG_MAX_LENGTH=1024
+#      - USE_LOG_UPLOADER=true
 #      - ACCESS_TOKEN=
 #      - TOKEN_UPDATE_PATH=
     extra_hosts:
