@@ -1,10 +1,10 @@
 {
   "name": "@chip-in/rn-mongodb-dadget",
-  "version": "0.1.6-d7",
+  "version": "0.1.6-d8",
   "description": "",
   "main": "lib/server.js",
   "dependencies": {
-    "@chip-in/dadget": "0.1.6-d7",
+    "@chip-in/dadget": "0.1.6-d8",
     "@chip-in/resource-node": "*",
     "@chip-in/logger": "*"
   },
