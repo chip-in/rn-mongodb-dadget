@@ -3,7 +3,7 @@ if [ $# -ne 1 ]; then
   echo "a version number required" 1>&2
   exit 1
 fi
-if [[ ! "$1" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-d[0-9]+)?$ ]]; then
+if [[ ! "$1" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-rc.[0-9]+)?$ ]]; then
   echo "a correct version number required" 1>&2
   exit 1
 fi
