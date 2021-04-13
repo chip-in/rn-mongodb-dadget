@@ -9,7 +9,7 @@ RUN apk update \
   && update-ca-certificates
 RUN mkdir -p ${CI_HOME}/ \
   && cd ${CI_HOME} \
-  && wget -qO - https://github.com/chip-in/rn-mongodb-dadget/archive/v${DADGET_VERSION}.tar.gz | tar zxf - \
+  && wget -qO - https://github.com/chip-in/rn-mongodb-dadget/archive/${DADGET_VERSION}.tar.gz | tar zxf - \
   && ln -s rn-mongodb-dadget-${DADGET_VERSION}/dadget-server dadget-server \
   && cd dadget-server \
   && npm install \
