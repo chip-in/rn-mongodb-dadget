@@ -1,7 +1,7 @@
 version: '2'
 services:
   dadget-server:
-    image: chipin/rn-mongodb-dadget:0.1.7-rc.26
+    image: chipin/rn-mongodb-dadget:0.1.7-rc.27
 #    deploy:
 #      restart_policy:
 #        condition: on-failure # version 3 required
